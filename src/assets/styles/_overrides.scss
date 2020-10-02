@@ -1,0 +1,222 @@
+.search-form {
+  padding-top: 15px;
+}
+
+#account-status-wrap > .row {
+  padding-bottom: 15px;
+}
+
+div.account-label {
+  font-size: 1.5em;
+  color: black;
+}
+
+div.account-value {
+  font-size: 1.2em;
+  color: #979797;
+}
+
+hr.balance {
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.icon-checked {
+  background-image: url('/static/assets/images/check_icon.png');
+  min-height: 15px;
+  min-width: 15px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.icon-xed {
+  background-image: url('/static/assets/images/x_icon.png');
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#account-status-header h1 {
+  padding-bottom: 1px;
+}
+
+.organization-name {
+  margin-top: 0px;
+}
+
+.id-label {
+  font-weight: bold;
+}
+
+hr {
+  padding: 5px
+}
+
+div.authorized-row {
+  margin-left: 20px;
+}
+
+.profile-display {
+  height: 30px;
+  width: 100%;
+}
+
+.profile-option {
+  margin: 0px;
+}
+
+.profile-list {
+  width: 100%;
+  outline: none;
+  box-shadow: none !important;
+  background-color: white;
+}
+
+select:focus {
+  outline: none;
+}
+
+#devNotes .tab-content {
+  padding: 5px 15px;
+}
+
+
+/* remove border radius for the tab */
+
+#devNotes .nav-pills>li>a,
+#devNotes .nav>li>a {
+  border-radius: 0;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+#devNotes a.projectLabel:focus,
+#devNotes .btn:focus,
+#devNotes button:focus:not(.close),
+#devNotes input:focus,
+#devNotes select:focus,
+#devNotes .fauxCheckbox:focus,
+#devNotes .fauxRadio:focus {
+    border: none;
+}
+
+#devChk .checkbox {
+  justify-content: left !important;
+}
+
+#devNote textarea {
+  width: 100%;
+}
+#devNotes .page-content a:focus {
+  border: none;
+}
+
+#devNotes .nav-pills > li.active > a, #devNotes .nav-pills > li.active > a:hover,
+#devNotes .nav-pills > li.active > a:focus {
+  color: #1E2123;
+}
+.devNotesHis {
+  overflow: scroll !important;
+  height: 200px !important;
+}
+
+.justify-left-checkboxes .checkbox {
+  justify-content: left !important;
+}
+
+.nvd3-svg {
+  overflow: visible !important;
+}
+.nvtooltip {
+  padding: 6px !important;
+}
+.nvtooltip table {
+  padding: 0 !important;
+}
+
+.multiSelect .checkBoxContainer {
+  max-height: 400px;
+  overflow: auto !important;
+}
+.margin-top-0 {
+  margin-top: 0 !important;
+}
+.ui-sortable-handle {
+  cursor: grab !important;
+}
+.ui-sortable-helper {
+  cursor: grabbing !important;
+}
+
+.label-disabled {
+  background: #666666 !important;
+}
+.label-enabled {
+  background: #CD1E1E !important;
+}
+.text-danger {
+  color: #a94442 !important;
+}
+.table-datatable-hide .dataTables_wrapper {
+  padding: 0 !important;
+}
+.table-datatable-hide .dataTable {
+  margin-top: 0 !important;
+  border-collapse: collapse !important;
+}
+.table-datatable-hide .dataTable thead th,
+.table-datatable-hide .dataTable thead td,
+.table-datatable-hide .dataTable tbody th,
+.table-datatable-hide .dataTable tbody td {
+  padding: 8px !important;
+}
+
+.border-top-0 {
+  border-top: none;
+}
+
+.fixed_header > tbody{
+  display:block;
+  overflow:auto;
+  overflow-x: hidden;
+  height: 500px;
+  width: 100% !important;
+}
+.fixed_header > thead > tr{
+  display:block;
+}
+
+.charts-table-th {
+  padding-left: 85px !important;
+}
+
+.width58px {
+  width: 58px !important;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+#left {
+
+  float: left;
+}
+
+.full-height {
+  height: 100%
+}
+
+.hidden {
+  display: none;
+}
+
+.full-width {
+  width: 100%;
+}
+.height225px {
+  height: 225px;
+}

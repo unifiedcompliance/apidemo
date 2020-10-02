@@ -1,0 +1,81 @@
+.complaints-page {
+    #complaintsTbl {
+
+
+        > thead,
+        > tbody {
+            overflow-x: hidden;
+        }
+        > thead > tr:first-child > th,
+        > tbody > tr > td {
+            &:nth-child(1) { //user
+                flex-basis: 12%;
+            }
+            &:nth-child(2) { //date
+                flex-basis: 8%;
+            }
+            &:nth-child(3) { //message id
+                flex-basis: 9%;
+            }
+            &:nth-child(4) { //message
+                flex-basis: 48%;
+            }
+            &:nth-child(5) { //campaign
+                flex-basis: 15%;
+            }
+            &:last-child { //removed
+                flex-basis: 8%;
+                justify-content: center;
+            }
+        }
+
+        @media screen and (min-width: 992px) and (max-width: 1200px) {
+            > thead > tr:first-child > th,
+            > tbody > tr > td {
+                &:nth-child(1) { //user
+                    flex-basis: 12%;
+                }
+                &:nth-child(2) { //date
+                    flex-basis: 10%;
+                }
+                &:nth-child(3) { //message id
+                    flex-basis: 11%;
+                }
+                &:nth-child(4) { //message
+                    flex-basis: 43%;
+                }
+                &:nth-child(5) { //campaign
+                    flex-basis: 15%;
+                }
+                &:last-child { //removed
+                    flex-basis: 9%;
+                    justify-content: center;
+                }
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 992px) {
+            > thead > tr:first-child > th,
+            > tbody > tr > td {
+                &:nth-child(1) { //user
+                    flex-basis: 12%;
+                }
+                &:nth-child(2) { //date
+                    flex-basis: 12%;
+                }
+                &:nth-child(3) { //message id
+                    flex-basis: 11%;
+                }
+                &:nth-child(4) { //message
+                    flex-basis: 37%;
+                }
+                &:nth-child(5) { //campaign
+                    flex-basis: 16%;
+                }
+                &:last-child { //removed
+                    flex-basis: 12%;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

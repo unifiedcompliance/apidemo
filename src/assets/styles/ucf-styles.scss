@@ -1,0 +1,3256 @@
+@import 'colors';
+@import 'fonts';
+
+/* Removes the default top padding from the <body>
+and adds background */
+body {
+    padding-top: 0;
+    background: $page-bg;
+    font-family: $page-font;
+    font-size: $page-font-size;
+    font-weight: 400;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.page-content {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    a:focus {
+        border-bottom: 3px solid $red;
+        outline: none;
+    }
+}
+/*GENERAL STYLES*******************************************************************************************************/
+
+/*BUTTONS AND LINKS*/
+.button-container {
+    display: flex;
+    flex-wrap: nowrap;
+
+    &.buttons-evenly {
+        justify-content: space-between;
+
+        button:first-child {
+            margin-left: 0;
+        }
+    }
+    &.buttons-right {
+        justify-content: flex-end;
+    }
+    button {
+        margin: 24px 0 0 24px;
+    }
+}
+
+.btn {
+    align-items: center;
+    background: $red;
+    border: 2px solid transparent;
+    border-radius: 0;
+    box-shadow: none;
+    color: white;
+    display: flex;;
+    justify-content: center;
+    margin-left: 16px;
+    min-height: 36px;
+    outline: 0 !important;
+    outline-offset: 0 !important;
+    padding: 0 30px;
+    text-transform: uppercase;
+    text-shadow: none;
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
+
+    &:not([class^="icon-"], [class*=" icon-"]) {
+        font-family: 'Open Sans', sans-serif;
+    }
+    &:active,
+    &:focus {
+        background: #576065;
+        box-shadow: none;
+        color: white;
+    }
+    &:hover {
+        background: #BC1919;
+        color: white;
+    }
+    &:disabled {
+        background: #576065;
+        outline: none;
+
+        &:hover {
+            background: #576065;
+            border-color: transparent;
+            color: white;
+        }
+    }
+}
+
+.btn-red {
+    align-items: center;
+    background: $red;
+    color: white;
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    min-height: 36px;
+    padding: 8px 24px;
+
+    :not([class^="icon-"], [class*=" icon-"]) {
+        font-family: 'Open Sans', sans-serif;
+    }
+}
+
+.blockLink {
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.medBtn,
+.btn-small,
+.smBtn {
+    padding: 8px 14px;
+}
+
+.btn.whiteBtn {
+    background: white;
+    color: #7a7f82;
+    border: 1px solid #d8dad8;
+}
+
+.btn.creamBtnRedTxt {
+    background: #f8f8f8;
+    color: $red !important;
+    border: 1px solid #d8dad8;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.btn.whiteBtnRedTxt {
+    background: #fff;
+    color: $red !important;
+    border: 1px solid #d8dad8;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.btn.whiteBtnRedTxt:focus,
+.btn.whiteBtnRedTxt:active {
+    background: white !important;
+}
+
+.btn.creamBtnRedTxt:focus, .btn.creamBtnRedTxt:active {
+    background: #f8f8f8 !important;
+}
+.alert button.close,
+.alert .close {
+    color: $gray;
+    font-size: 1em;
+    line-height: normal;
+    margin-left: 8px;
+    opacity: 0.7;
+
+    &:hover {
+        opacity: 1;
+    }
+    &:focus > * {
+        box-shadow: none;
+        border: 0;
+    }
+}
+a.blueLink {
+    color: #009EA1;
+}
+
+a {
+    color: #576065;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #1E2123;
+}
+
+a#cancel {
+    margin-right: 10px;
+}
+
+.icon_link_plain {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 13px;
+}
+
+.icon_link_plain i {
+    color: $red !important;
+    position: relative;
+    top: 2px;
+    margin-right: 10px;
+}
+
+.btnRight {
+    float: right;
+}
+
+.homeContent .btn {
+    float: right;
+    position: relative;
+    top: 5px;
+}
+
+.imgBtn {
+    font-size: 12px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.imgBtn img {
+    width: 13px;
+    height: auto;
+    margin-right: 5px;
+    position: relative;
+    top: -1px;
+}
+
+.fixedBtn, .fixedBtnSmall, .fixedBtnMed {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 12px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.fixedBtn {
+    width: 110px;
+}
+
+.fixedBtnMed {
+    width: 70px;
+}
+
+.fixedBtnSmall, button.fixedBtnSmall {
+    width: 70px;
+}
+
+.sortBtns {
+    font-size: 12px;
+}
+
+.btnClose {
+    display: inline-block;
+    line-height: 24px;
+    background: url('/img/icon_expand_close.png') right center no-repeat;
+    background-size: 24px auto;
+    padding-right: 35px;
+    font-style: italic;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    border: none;
+}
+
+.page-content .inpageNav.switchProjBtn {
+    width: 145px;
+    font-size: 14px;
+    position: relative;
+    z-index: 52000;
+}
+
+.inpageNav.switchProjBtn a {
+    text-transform: none;
+}
+
+.plainBtn {
+    background: none;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: underline;
+    color: #576065;
+    font-size: 13px;
+    text-align: left;
+    line-height: 39px;
+}
+
+.plainBtn:hover {
+    color: #1e2123;
+}
+
+.docLink {
+    display: inline-block;
+    padding-left: 25px;
+    margin-left: 25px;
+    background: url('/img/icon_document.png') left center no-repeat;
+    background-size: auto 18px !important;
+    font-size: 13px;
+}
+
+.docDownloadLink {
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.docDownloadLink:hover {
+    text-decoration: none;
+}
+
+.docDownloadLink i {
+    display: inline-block;
+    font-size: 20px;
+    color: $red;
+    padding-right: 10px;
+    position: relative;
+    top: 3px;
+}
+
+.docDownloadLink span {
+    text-decoration: underline;
+}
+
+.headlineToggleIcon {
+    width: 17px;
+    height: auto;
+}
+
+.uriBtn {
+    margin-top: 9px !important;
+    margin-left: 5px !important;
+}
+
+/*BORDERS*/
+.noTopBorder {
+    border-top: none !important;
+}
+
+.noBottomBorder {
+    border-bottom: none !important;
+}
+
+.addBottomBorder {
+    border-bottom: 1px solid #d8dad8 !important;
+}
+
+.noBorder {
+    border: none !important;
+}
+
+.greenBorder {
+    border: 2px solid #009ea1 !important;
+}
+
+/*MISC STYLES*/
+.clear {
+    width: 100%;
+    height: 0;
+    clear: both;
+    display: block;
+    float: none;
+}
+
+.rounded {
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    border-radius: 4px !important;
+}
+
+.middleAlign {
+    vertical-align: middle !important;
+}
+
+.borderBox {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.displayBlock {
+    display: block !important;
+}
+
+.displayInlineBlock {
+    display: inline-block !important;
+}
+
+.floatLeft {
+    float: left !important;
+}
+
+.lineHeight39 {
+    line-height: 39px !important;
+}
+
+.moveToTop {
+    position: relative;
+    z-index: 50000;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.break-long-words {
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.no-break {
+    white-space: nowrap;
+}
+
+.text-center,
+.table th.text-center,
+.table td.text-center,
+.table.text-center th,
+.table.text-center td {
+    text-align: center !important;
+}
+
+/*WIDTHS*/
+.width100 {
+    width: 100% !important;
+}
+
+.width70 {
+    width: 70% !important;
+}
+
+.width30 {
+    width: 30% !important;
+}
+
+.width33 {
+    width: 33% !important;
+}
+
+.width25 {
+    width: 25% !important;
+}
+
+.width60px {
+    width: 60px !important;
+}
+
+.width200px {
+    width: 200px !important;
+}
+
+.width275px {
+    width: 275px !important;
+}
+
+.width175px {
+    width: 175px !important;
+}
+
+.width140px {
+    width: 140px !important;
+}
+
+.width50 {
+    width: 50% !important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.width50:nth-child(odd) {
+    padding-right: 10px;
+}
+
+.width50:nth-child(even) {
+    padding-left: 10px;
+}
+
+/*MARGINS AND PADDING*/
+.noMarginTop {
+    margin-top: 0 !important;
+}
+
+.noMarginBottom {
+    margin-bottom: 0 !important;
+}
+
+.noMarginLeft {
+    margin-left: 0 !important;
+}
+
+.noMarginRight {
+    margin-right: 0 !important;
+}
+
+.marginTop20 {
+    margin-top: 20px;
+}
+
+.marginTop10 {
+    margin-top: 10px;
+}
+
+.marginTop8 {
+    margin-top: 8px;
+}
+
+.marginBottom20 {
+    margin-bottom: 20px;
+}
+
+.marginBottom10 {
+    margin-bottom: 10px !important;
+}
+
+.horizMargin10 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.marginLeft10 {
+    margin-left: 10px !important;
+}
+
+.marginLeft0 {
+    margin-left: 0 !important;
+}
+
+.marginRight10 {
+    margin-right: 10px !important;
+}
+
+.horizPadding10 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.horizPadding17 {
+    padding-left: 17px;
+    padding-right: 17px;
+}
+
+.vertPadding50 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.vertPadding20 {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+.vertPadding5 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.paddingRight10 {
+    padding-right: 10px;
+}
+
+.wellBig {
+    padding: 50px 60px;
+}
+
+.paddingLeft12 {
+    padding-left: 12px !important;
+}
+
+.noPadBottom {
+    padding-bottom: 0 !important;
+}
+
+.paddingBottom25 {
+    padding-bottom: 25px !important;
+}
+
+.padRedTopFix {
+    padding-top: 3px;
+}
+
+/*BACKGROUND COLORS*/
+.bgGreen {
+    background: #009EA1;
+}
+
+.bgLtBlue {
+    background: #de7dc1;
+}
+
+.bgBlue {
+    background: #5061a6;
+}
+
+.bgOrange {
+    background: #f17023;
+}
+
+.bgRed {
+    background: $red !important;
+}
+
+.bgCream {
+    background: #f8f8f8;
+}
+
+/*FONT SIZES*/
+.txt-increase {
+    font-size: 18px;
+}
+
+.txt-increase16 {
+    font-size: 16px;
+}
+
+.txt-decrease14 {
+    font-size: 14px;
+}
+
+.txt-decrease {
+    font-size: 12px;
+}
+
+.smTxt {
+    text-transform: none;
+    font-weight: 400;
+    color: #191c1f;
+    font-size: 13px;
+}
+
+.text-caps {
+    text-transform: uppercase;
+}
+
+.text-capital {
+    text-transform: capitalize;
+}
+
+.txt_left {
+    text-align: left !important;
+}
+
+.txt_right {
+    text-align: right;
+}
+
+/*TEXT COLOR*/
+.txt_blue {
+    color: #0E7DC1 !important;
+}
+
+.txt_white {
+    color: white !important;
+}
+
+.txt_green {
+    color: #009EA1 !important;
+}
+
+.txt_red {
+    color: $red;
+}
+
+.txt_grey {
+    color: #7a7f82;
+}
+
+/*HEADLINES*/
+h6 {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 5px 0;
+}
+
+h4 {
+    font-weight: normal;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: 300 !important;
+    padding-bottom: 20px;
+}
+
+.homeContent h1 {
+    float: left;
+    font-weight: 300;
+}
+
+h5 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 55px;
+}
+
+.redTopBorder {
+    position: relative;
+    padding: 0 15px;
+    margin-bottom: 0;
+    margin-top: 0;
+    background: white;
+    border-left: 1px solid #d8dad8;
+    border-right: 1px solid #d8dad8;
+}
+
+.redTopBorder:before {
+    position: absolute;
+    top: -3px;
+    left: -1px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: $red;
+    border-left: 1px solid $red;
+    border-right: 1px solid $red;
+}
+
+.redTopBorder address {
+    float: right;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+h2.redTopBorder address {
+    line-height: 55px;
+}
+
+.redTopBorder address strong {
+    padding-right: 5px;
+}
+
+table.redTopBorder {
+    padding: 0;
+}
+
+table.redTopBorder:before {
+    border-left: none;
+    border-right: none;
+    left: 0;
+}
+
+.redTopBorder .resetBtn {
+    margin-top: 9px;
+    margin-left: 10px;
+}
+
+/*switch project nav*/
+.inpageNav.switchProjBtn .inpageSubNav {
+    width: 350px;
+    left: -206px;
+    top: 40px;
+}
+
+.inpageNav.switchProjBtn .inpageSubNav a {
+    color: $red !important;
+    font-size: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/*CONTAINER STYLES*/
+.container-fluid.container-top-level {
+    padding-left: 45px;
+    padding-right: 45px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Well color overwrite */
+.well {
+    background-color: white;
+    box-shadow: none;
+    border-color: #d8dad8;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.bgWhite {
+    background: white;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid #d8dad8;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.bgGrey {
+    background: #f8f8f8;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid #d8dad8;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*END GENERAL STYLES***************************************************************************************************/
+
+/*TABLE STYLES*********************************************************************************************************/
+
+/* Sortable tables */
+table.table-hover tbody tr:hover {
+    cursor: pointer;
+}
+
+th.sort:hover,
+th.sortable:hover {
+    cursor: pointer;
+    color: #576065;
+}
+
+th.sortable:hover {
+    color: #D71D24;
+}
+
+th.sort {
+    color: #1E2123;
+    text-decoration: none;
+}
+
+/* TABLE STYLES */
+table,
+table.table,
+.modal table {
+    background: none;
+    border-collapse: collapse;
+    margin: 0;
+    width: 100%;
+
+    > thead > tr {
+        background-color: $table-header-bg;
+        text-transform: uppercase;
+
+        > th {
+            font-size: $page-font-size;
+            font-weight: 700;
+        }
+    }
+    > tbody > tr {
+        background-color: $table-body-bg;
+
+        > td {
+            font-size: $page-font-size;
+            font-weight: 400;
+        }
+    }
+    &.fixed-header {
+        display: flex;
+        flex-direction: column;
+
+        caption {
+            color: $page-text-default;
+        }
+        > thead {
+            flex-shrink: 0;
+        }
+        > tbody {
+            overflow-y: auto;
+            flex-shrink: 0;
+        }
+        > thead,
+        > thead:first-child,
+        > tbody {
+            display: flex;
+            flex-direction: column;
+            border-top: 0; //overrides bootstrap
+            border-bottom: 0; //overrides bootstrap
+
+            > tr,
+            > tr:first-child {
+                display: flex;
+                white-space: nowrap;
+
+                th,
+                > th,
+                td,
+                > td {
+                    align-items: flex-start;
+                    border-color: $table-border-color;
+                    border-style: solid;
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    display: flex;
+                    justify-content: flex-start;
+                    white-space: normal;
+                }
+
+                th,
+                > th {
+                    border-width: 1px 1px 1px 0;
+
+                    &:first-child {
+                        border-width: 1px ;
+                    }
+                }
+                td,
+                > td {
+                    background-color: $white;
+                    border-width: 0 1px 1px 0;
+
+                    &:first-child {
+                        border-width: 0 1px 1px 1px;
+                    }
+                }
+            }
+        }
+        > thead > tr:first-child,
+        > tbody > tr {
+            td:first-child:nth-last-child(1),
+            th:first-child:nth-last-child(1) {
+                flex-basis: 100%;
+            }
+
+            @for $i from 2 through 10 {
+                > th:first-child:nth-last-child(#{$i}),
+                > th:first-child:nth-last-child(#{$i}) ~ th,
+                > td:first-child:nth-last-child(#{$i}),
+                > td:first-child:nth-last-child(#{$i}) ~ td {
+                    flex-basis: #{(100 / $i) * 1%};
+                }
+            }
+        }
+    }
+}
+
+.tableLessPad td, .tableLessPad th {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+
+table.tableNoBorder tr:first-child td {
+    padding-top: 20px;
+}
+
+table.tableNoBorder tr:last-child td {
+    padding-bottom: 40px;
+}
+
+table.tableNoBorder td {
+    border: none;
+    vertical-align: top !important;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.taskData p {
+    display: inline-block;
+    width: 33%;
+    padding-right: .33%;
+    vertical-align: top;
+}
+
+/* Overwrites default hover color for table rows*/
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background: $table-hover-bg;
+}
+
+/*END TABLE STYLES*****************************************************************************************************/
+
+/*SCROLLBOX STYLES*****************************************************************************************************/
+
+/* Scrollable areas for long lists etc. */
+.scrollable-big {
+    max-height: 850px;
+    overflow-y: auto;
+}
+
+.scrollable {
+    max-height: 650px;
+    overflow-y: auto;
+}
+
+.scrollable-medium {
+    max-height: 325px;
+    overflow-y: auto;
+    border: 1px solid #d8dad8;
+    padding: 10px;
+}
+
+.scrollable-medium .checkbox {
+    display: block;
+    width: 100%;
+    clear: both;
+    float: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.scrollable-shorter {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.no-scroll-x {
+    overflow-x: hidden;
+}
+
+/* Non-scrollable, fixed-height */
+.fixed-short {
+    height: 135px;
+}
+
+/*END SCROLLBOX STYLES*************************************************************************************************/
+
+/*TERM HIERARCHY STYLES************************************************************************************************/
+/*bootstrap overwrites to make the search display the correct font*/
+
+.semantic-map svg {
+    width: 100% !important;
+    height: auto !important;
+}
+
+button, select, html, textarea, input, a.btn {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.search-block {
+    height: 39px;
+    position: relative;
+}
+
+.search-block input {
+    border: 1px solid #d8dad8 !important;
+    box-shadow: none !important;
+    padding: 10px 12px !important;
+    background: white !important;
+    font-size: 13px !important;
+    font-family: 'Open Sans', sans-serif !important;
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    font-style: normal !important;
+    height: 39px !important;
+}
+
+.term-lookup .search-block .search-icon {
+    width: 40px;
+    height: 39px;
+    line-height: 39px;
+    position: absolute;
+    left: 295px;
+    top: 1px;
+    z-index: 500;
+    background: transparent url('/img/search_icon.png') center center no-repeat !important;
+    background-size: 15px auto !important;
+    border: 0;
+    color: #7a7f82 !important;
+    cursor: pointer;
+    text-align: center;
+}
+
+.term-lookup {
+    background: white !important;
+    border: none !important;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.clear-search {
+    height: 39px !important;
+    width: 39px;
+    text-align: center;
+    background: $red url('/img/x_icon_white.png') center center no-repeat !important;
+    background-size: 20px auto !important;
+    border: none;
+}
+
+.history-buttons-container button.prev-page, .history-buttons-container button.next-page {
+    background-size: 30px auto !important;
+    cursor: pointer;
+}
+
+.history-buttons-container button.prev-page {
+    background: white url('/img/prev.png') center center no-repeat !important;
+}
+
+.history-buttons-container button.next-page {
+    background: white url('/img/next.png') center center no-repeat !important;
+}
+
+.next-page:disabled, .prev-page:disabled {
+    color: white !important;
+    border: none;
+}
+
+.relation-edit-modal .header {
+    background: $red !important;
+    color: white !important;
+}
+
+.relation-edit-modal .body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.relation-edit-modal .body label {
+    display: block;
+}
+
+.relation-edit-modal .footer .done, .relation-edit-modal .footer .delete {
+    background-color: $red;
+    margin-left: 10px !important;
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 0;
+    float: right;
+    height: auto !important;
+    line-height: 39px !important;
+    vertical-align: middle;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.relation-edit-modal .footer .done:hover, .relation-edit-modal .footer .delete:hover {
+    background-color: #BC1919 !important;
+}
+
+/*END TERM HIERARCHY STYLES********************************************************************************************/
+
+/* Extra spacing below tab header rows */
+.tab-header {
+    margin-bottom: 10px;
+}
+
+/* Dropdown for role filter in assignment */
+.dropdown-menu.role-filter-dropdown li:hover > a {
+    background: #F3E7E7;
+    color: #000;
+    cursor: pointer;
+}
+
+.dropdown-menu.role-filter-dropdown li.active > a,
+.dropdown-menu.role-filter-dropdown li.active:hover > a {
+    background: #fff;
+    color: #d22;
+    cursor: default;
+}
+
+/* Language/Subject/Roles tabs in edit team members */
+.tab-content.tab-scrollable {
+    margin-top: 20px;
+    height: 275px;
+    overflow-y: auto;
+}
+
+/* Login Header Logo */
+.big-logo {
+    max-height: 60px;
+    max-width: 60px;
+}
+
+/*PAGINATION AND BREADCRUMBS*******************************************************************************************/
+
+.breadcrumb {
+    position: absolute;
+    background: transparent;
+    top: 21px;
+    left: 45px;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb-item {
+    font-size: 11px;
+    color: $red;
+    text-decoration: none;
+    position: relative;
+}
+
+.breadcrumb-item.active {
+    color: #1E2123;
+    font-style: italic;
+}
+
+.breadcrumb-item:not(.active):after {
+    display: inline-block;
+    content: '>';
+    position: relative;
+    margin-left: 5px;
+    top: 1px;
+    color: #1E2123;
+}
+
+/*END PAGINATION AND BREADCRUMBS***************************************************************************************/
+
+/**
+ * Profile form label size adjustments
+ * (currently no labels wrap lines, but that may change when localized)
+ */
+
+/*FORM STYLES**********************************************************************************************************/
+.blockLabel {
+    display: block !important;
+    font-size: 12px;
+    font-weight: 700 !important;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 7px;
+    color: #1E2123;
+    font-size: 13px;
+}
+
+.form-horizontal.form-profile .control-label, .blockLabel {
+    float: none;
+    text-align: left;
+    padding-top: 0;
+    text-transform: uppercase;
+    font-size: 12px !important;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.form-horizontal .controls {
+    margin-left: 0;
+}
+
+.dateForm .control-group {
+    width: 100%;
+    margin-right: 0;
+}
+
+.dateForm input[type="date"] {
+    display: inline-block;
+    width: 176px;
+    margin-right: 8px;
+}
+
+.dateForm input[type="submit"] {
+    display: inline-block;
+}
+
+.dateForm input[type="submit"]:last-child {
+    float: right;
+}
+
+.form-horizontal .control-group {
+    margin-bottom: 18px;
+}
+
+.heightFixedShort .control-group {
+    width: 100%;
+}
+
+/* Fix for control group labels when an unwanted class ("radio", "checkbox", etc.) is added */
+.control-group, .halfSizeGroup {
+    width: 32%;
+    float: left;
+    margin-right: 2%;
+}
+
+.halfSizeGroup .control-group {
+    width: 47%;
+    margin-right: 0;
+}
+
+.halfSizeGroup .control-group:first-child {
+    margin-right: 6%;
+}
+
+.control-group:nth-of-type(3n) {
+    margin-right: 0;
+}
+
+.control-label {
+    padding-left: 0;
+}
+
+.form-horizontal.form-profile label.checkbox,
+.form-horizontal.form-profile label.radio,
+.form-horizontal.form-profile label.radio.control-label {
+    padding: 10px 8px;
+    margin-bottom: 0;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+label.checkbox:not(:last-of-type), label.radio:not(:last-of-type), label.radio.control-label {
+    border-bottom: 1px solid #d8dad8;
+}
+
+label.checkbox input[type='checkbox'], label.radio input[type='radio'] {
+    margin-left: 5px;
+}
+
+.heightFixed {
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.heightFixedShort {
+    height: 85px;
+}
+
+.preferencesContainer.heightFixedShort {
+    height: 125px;
+}
+
+.formElemLessPad {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    height: 39px !important;
+}
+
+input[type='text'],
+input[type='date'],
+input[type='email'],
+input[type='password'],
+input[type='number'],
+input[type='url'],
+textarea,
+textarea.form-control,
+select,
+input.form-control,
+select.form-control,
+button.dropdown-toggle,
+.form-inline input,
+.form-inline select,
+.form-group select,
+.form-group input {
+    background: white;
+    box-sizing: border-box;
+    box-shadow: none;
+    font-size: $page-font-size;
+    font-family: 'Open Sans', sans-serif !important;
+    height: 44px;
+    padding: 12px;
+}
+input[type='date'] {
+    background: white url('/img/date_icon.png') 14px center no-repeat;
+    background-size: 13px auto;
+    padding-left: 36px;
+}
+select,
+select.form-control,
+.form-inline select,
+.form-group select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+.radio,
+.checkbox {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 0;
+
+    label,
+    > label {
+        display: flex;
+        font-size: $page-font-size;
+        min-height: 16px;
+        min-width: 16px;
+        padding-left: 0;
+        position: relative;
+
+        &::before {
+            align-self: center;
+            border: 2px solid $light-gray;
+            content: '';
+            display: inline-block;
+            height: 16px;
+            transition: border-color 0.5s;
+            width: 16px;
+        }
+        &:focus {
+            outline: none;
+        }
+        input[type='radio'],
+        input[type='checkbox'] {
+            display: none;
+            visibility: hidden;
+
+            + span {
+                display: inline-block;
+                margin-left: 8px;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+.radio > label {
+    &::before {
+        border-radius: 50%;
+    }
+    &.selected::before {
+        background-color: $red;
+        border-color: $red;
+    }
+}
+.checkbox > label.selected {
+    &::before {
+        background-color: $red;
+        border-color: $red;
+    }
+    &::after {
+        content: '\2713';
+        color: $white;
+        font-size: 16px;
+        left: 2px;
+        top: -2px;
+        position: absolute;
+    }
+}
+textarea,
+textarea.form-control {
+    height: auto;
+
+    &.fixed {
+        resize: none;
+    }
+    &.scrollable {
+        overflow: auto;
+    }
+    &.resize-vertical {
+        resize: vertical;
+    }
+}
+.fullTextarea {
+    height: 150px;
+}
+.btn-group.dropdown {
+    width: 100%;
+
+    button.btn.dropdown-toggle {
+        background: $white;
+        border: 1px solid #ccc; //match bootstrap border styles
+        border-radius: 4px;
+        color: $page-text-default;
+        justify-content: space-between;
+        overflow: hidden;
+        text-transform: none;
+        width: 100%;
+
+        &::after {
+            content: "\f107"; //angle-down
+            color: $gray;
+            font-family: "FontAwesome";
+            font-size: 1.7em;
+            position: absolute;
+            right: 16px;
+            transition-property: font-size font-weight color transform;
+            transition-duration: 0.3s;
+        }
+        &[aria-expanded='true']::after {
+            color: $page-text-default;
+            font-size: 2em;
+            font-weight: normal;
+            transform: rotate(180deg);
+            transition-property: font-size font-weight color transform;
+            transition-duration: 0.3s;
+        }
+        &[disabled] {
+            background-color: transparent;
+            cursor: not-allowed;
+        }
+        &:active,
+        &:hover {
+            background-color: $white;
+        }
+        .toggle-text {
+            display: inline-block;
+            max-width: calc(100% - 32px);
+            overflow: hidden;
+            text-align: left;
+            width: calc(100% - 32px);
+        }
+    }
+    &.open > ul.dropdown-menu {
+        max-height: 400px;
+        overflow-y: auto;
+        padding: 0;
+        top: 42px;
+        width: 100%;
+
+        li {
+            border-bottom: 1px solid $light-gray;
+            padding: 12px;
+
+            &:last-of-type {
+                border-bottom: none;
+            }
+            &:hover {
+                background: $light;
+            }
+        }
+    }
+}
+
+.value-list-input a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.value-list-input a:hover {
+    background: #F8F8F8 !important;
+    color: #576065 !important;
+}
+
+.value-list-input {
+    max-height: 200px !important;
+}
+
+form *:focus, form *:active, select {
+    outline: 0 none;
+}
+
+button {
+    box-shadow: none !important;
+}
+
+a:focus, a:active {
+    outline: none;
+}
+
+.fileUpload {
+    line-height: 39px;
+    width: 75px;
+    text-align: center;
+    font-size: 14px;
+    padding: 0 26px;
+    border: 2px solid #009ea1;
+    position: relative;
+    overflow: hidden;
+}
+
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+
+
+/**
+ * Fix for heights of single checkboxes with a control-label
+ * but no label wrapping the input element
+ */
+.controls > input[type="checkbox"] {
+    margin-top: 7px;
+}
+
+/*FAUX CHECKBOX*/
+.checkboxParent {
+    position: relative;
+}
+
+.checkboxParent label {
+    display: inline-block;
+}
+
+.sortBtns label.checkboxParent {
+    margin-bottom: 0;
+    padding-left: 15px;
+}
+
+label.checkboxParent.inheadCheckbox {
+    position: relative;
+    top: 8px;
+}
+
+.fauxCheckbox, .fauxRadio {
+    outline: 0;
+    box-sizing: border-box;
+    background: white;
+    border: 1px solid #e3e3e3;
+    float: left;
+    vertical-align: middle;
+    margin-right: 12px;
+}
+
+.fauxCheckbox {
+    width: 22px;
+    height: 22px;
+}
+
+.fauxRadio {
+    width: 16px;
+    height: 16px;
+    margin-top: 3px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+
+.checkboxParent input[type="checkbox"], .checkboxParent input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+/* Toggled State */
+.checkboxParent input[type=checkbox]:checked ~ div {
+    background: white url('/img/checkmark.png') center center no-repeat;
+    background-size: 15px auto;
+}
+
+.checkboxParent input[type=radio]:checked ~ div {
+    background: white url('/img/radio_circle.png') center center no-repeat;
+    background-size: 12px 12px;
+}
+
+.checkboxParent input[type=checkbox][disabled] + .fauxCheckbox,
+.checkboxParent input[type=radio][disabled] + .fauxRadio {
+    background-color: rgb(220, 220, 220);
+}
+
+.noWrapText {
+    display: block;
+    overflow: hidden;
+}
+
+/*to wrap around text so it doesn't wrap around the checkbox or radio*/
+.minWidth {
+    min-width: 50px !important;
+    max-width: 100%;
+    width: auto;
+}
+
+/*for the control-group checkboxes*/
+.control-group .checkboxParent {
+    float: left;
+}
+
+.checkboxAlt .control-group {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: 10px 8px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.checkboxAlt .control-group:not(:last-of-type) {
+    border-bottom: 1px solid #d8dad8;
+}
+
+.checkboxAlt .control-group label {
+    margin-bottom: 0;
+}
+
+td .checkboxParent.inheadCheckbox {
+    text-align: center;
+}
+
+td .checkboxParent.inheadCheckbox .fauxCheckbox {
+    display: inline-block;
+    float: none;
+    margin: 0;
+}
+
+.help-inline {
+    color: $red;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+/*END FAUX CHECKBOX*/
+/*END FORM STYLES******************************************************************************************************/
+
+.alert-info {
+    background: white;
+    border: 1px solid $table-border-color;
+    color: $red;
+    text-align: center;
+    font-size: 18px;
+    padding: 16px 25px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.alert-danger {
+    border: 1px solid $light-red;
+    background-color: lighten($light-red, 42%);
+    //@include box-shadow(0, 0, 1px, 3px, lighten($light-red, 35%), false);
+    color: $red;
+    font-weight:500;
+}
+
+.block-wrapper {
+    margin-top: 20px;
+}
+
+.block-wrapper-thinner {
+    margin-top: 10px;
+}
+
+.dispute-label {
+    color: #d22;
+    text-transform: uppercase;
+}
+
+/*get rid of border radius on buttons*/
+.input-append .add-on:last-child,
+.input-append .btn:last-child,
+.input-append .btn-group:last-child > .dropdown-toggle {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.linkOn {
+    display: none;
+}
+
+.navbar.center .navbar-inner {
+    text-align: left;
+    width: 100%;
+}
+
+.navbar.center .nav,
+.navbar.center .nav li {
+    display: block;
+    float: none;
+    vertical-align: top;
+    margin: 0;
+}
+
+.navbar {
+    width: 100%;
+    margin: auto;
+}
+
+/* FORM ELEMENT OVERWRITES */
+
+.searchForm {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+    position: relative;
+    width: 400px;
+    height: 100%;
+}
+
+.searchForm input {
+    width: 100%;
+    border: 1px solid #d8dad8;
+    box-shadow: none;
+    padding: 9px 12px;
+    height: 39px;
+    background: white;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 0;
+    position: relative;
+    top: -1px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.btn-search {
+    width: 40px;
+    height: 39px;
+    line-height: 39px;
+    position: absolute;
+    top: 8px;
+    right: 0;
+    z-index: 500;
+    background: transparent !important;
+    border: 0;
+    color: #7a7f82;
+    cursor: pointer;
+}
+
+.btn-search:active, .btn-search:focus, .btn-search:disabled {
+    background: transparent !important;
+}
+
+.btn-search img {
+    width: 15px;
+    height: auto;
+}
+
+.searchForm.input-append input {
+    top: 8px;
+}
+
+.form-inline {
+    margin-bottom: 0;
+}
+
+label.label-inline {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+label.label-inline:last-of-type {
+    margin-right: 0;
+}
+
+label.label-inline input[type="radio"],
+label.label-inline input[type="checkbox"] {
+    margin-bottom: 4px;
+}
+
+
+
+.select-side {
+    width: 40px;
+    position: absolute;
+    top: 0px;
+    background-color: #F3F9FE;
+    height: 100%;
+    left: 120px;
+    border-radius: 0px 3px 3px 0px;
+    border-right: solid 1px gray;
+    border-top: solid 1px gray;
+    border-bottom: solid 1px gray;
+    pointer-events:none;
+
+    &:before {
+        border-left: solid 1px lightgrey;
+        content: "";
+        position: absolute;
+        left    : 0;
+        bottom  : 0;
+        height  : 100%;
+        width   : 1px;  /* or 100px */
+    }
+    i {
+        left: 30%;
+        top: 12px;
+
+        &.blue {
+            color: #4E7AF0;
+        }
+    }
+}
+
+
+
+
+
+.answer-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.answer-group .scrollable-medium {
+    margin-bottom: 10px;
+}
+
+.answer-group .btn {
+    margin-top: 0;
+}
+
+/*FOOTER STYLES********************************************************************************************************/
+footer {
+    min-width: 1040px;
+}
+
+.copyright {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    border-top: 1px solid #D8DADB;
+    font-size: 12px;
+}
+
+/*END FOOTER STYLES****************************************************************************************************/
+
+/*PROFILE PAGE STYLES**************************************************************************************************/
+.slackIcon {
+    width: 30px;
+    height: auto;
+    float: left;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+
+/*END PROFILE PAGE STYLES**********************************************************************************************/
+
+/*NAVIGATION STYLES****************************************************************************************************/
+.navWrap {
+    transition-property: width;
+    -webkit-transition-property: width;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+
+    span.menu-item-text {
+        transition-property: opacity;
+        -webkit-transition-property: opacity;
+        transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+    }
+
+    &.closed {
+        width: 80px;
+
+        span.menu-item-text {
+            opacity: 0;
+        }
+
+        ul li:last-child .menu-item-icon {
+            > img { //hide atom logo, show icon instead
+                display: inline-block;
+            }
+            > span {
+                display: none;
+            }
+        }
+    }
+    &.open {
+        width: 248px;
+
+        span.menu-item-text {
+            opacity: 1;
+        }
+
+        ul li:last-child .menu-item-icon {
+            > img { //hide icon, show atom logo
+                display: none;
+            }
+            > span {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+        li {
+            align-items: center;
+            display: flex;
+            flex-grow: 0;
+            flex-shrink: 0;
+            border-left: 3px solid transparent;
+            border-bottom: 1px solid $nav-separator-bg;
+            margin: 0;
+            padding: 0;
+
+            i.fa,
+            i.fa-2x {
+                font-size: 21px;
+            }
+            a {
+                align-items: center;
+                color: inherit;
+                display: flex;
+                text-decoration: none;
+                width: 100%;
+
+                &:link,
+                &:active,
+                &:focus,
+                &:visited,
+                &:hover {
+                    border-bottom: 0 !important;
+                    color: inherit;
+                }
+            }
+            &:not(.active) {
+                background-color: $nav-inactive-bg;
+                color: $nav-inactive;
+
+                &:hover {
+                    background-color: $nav-inactive-hover-bg;
+                    color: $nav-inactive-hover;
+                    cursor: pointer;
+
+                    svg {
+                        color: $nav-inactive-hover;
+                    }
+                }
+            }
+            &.active {
+                background-color: $nav-active-bg;
+                border-left: 3px solid $nav-active-highlight;
+                color: $nav-active;
+
+                &:hover {
+                    background-color: $nav-active-hover-bg;
+                    color: $nav-active-hover;
+                    cursor: pointer;
+                }
+            }
+            &:last-child {
+                align-items: flex-end;
+                justify-content: center;
+                cursor: default;
+                flex-grow: 1;
+
+                &:hover {
+                    background-color: $nav-inactive-bg;
+                    color: $nav-inactive;
+                    cursor: default;
+                }
+            }
+            .menu-item-text {
+                font-size: 14px;
+                overflow-x: hidden;
+                white-space: nowrap;
+            }
+            .menu-item-icon {
+                box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                min-width: 76px;
+                padding: 16px;
+            }
+        } //end li
+    } //end ul
+} //end navwrap
+
+/*END NAVIGATION STYLES************************************************************************************************/
+
+/*DASHBOARD STYLES*****************************************************************************************************/
+.chart-wrapper, .chart {
+    width: 100%;
+}
+
+.taskBtn {
+    position: relative;
+    z-index: 52000;
+    margin-left: 10px;
+}
+
+/*END DASHBOARD STYLES*************************************************************************************************/
+
+/* TASK PROGRESS STYLES ***********************************************************************************************/
+.stepsSymbolsInput {
+    width: calc(100% - 96px);
+}
+
+.steps-wrapper .btn-primary {
+    line-height: 39px;
+    font-size: 14px;
+    padding: 0 26px;
+}
+
+.progress-head {
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.progress-head h1 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.08em;
+}
+
+.task-name {
+    background: #690 url(/img/bkgrnd-taskname.png) no-repeat right;
+    height: 60px;
+    padding: 0 15px;
+    vertical-align: middle;
+}
+
+/* This wrapper controls the placement of the tasks steps to
+the right of the Task name at the top of the page */
+
+.task-steps-wrapper {
+    height: 60px;
+    position: relative;
+}
+
+.steps-wrapper {
+    padding: 15px 15px 0;
+}
+
+.task-pager {
+    float: left;
+    width: 40px;
+    text-align: center;
+    font-size: 25px;
+    color: $red;
+    margin-top: 15px;
+}
+
+.task-pager-left {
+    left: 0;
+}
+
+.task-pager-right {
+    right: 0;
+    position: absolute;
+}
+
+.task-pager > a {
+    text-decoration: none;
+}
+
+.waypoint-wrapper {
+    float: left;
+    left: 0;
+    height: 55px;
+    width: calc(100% - 80px);
+}
+
+.task-item {
+    position: relative;
+    width: auto !important;
+    display: inline-block;
+    float: left;
+    color: #191c1f;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: default;
+    background: white !important;
+    border-top: 1px solid #d8dad8;
+    border-bottom: 1px solid #d8dad8;
+    border-right: 1px solid #d8dad8;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+.task-item:first-child {
+    border-left: 1px solid #d8dad8;
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.task-item:last-child {
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomright: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.task-item:not(:first-child) {
+    margin-left: 0 !important;
+}
+
+.task-item p, .task-item a {
+    display: inline-block;
+    margin: 0;
+    line-height: 55px;
+    padding: 0 20px;
+}
+
+.task-item a {
+    text-decoration: none;
+}
+
+.task-item:not(:first-child):after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -8px;
+    top: 20px;
+    width: 15px;
+    height: 15px;
+    background: white !important;
+    border-bottom: 1px solid #d8dad8;
+    border-right: 1px solid #d8dad8;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
+
+.task-item.task-pending, .task-item.task-current, .task-item.task-done {
+    background: no-repeat center;
+}
+
+.task-item.task-active {
+    color: $red;
+    font-weight: 400;
+}
+
+.task-item a {
+    color: #000;
+}
+
+/*DATE PICKER*/
+.date-picker table {
+    border: none !important;
+}
+
+.date-picker table td, .date-picker table th {
+    padding: 5px;
+    text-align: center;
+}
+
+.date-picker table td, .date-picker table th, .date-picker table th:first-child, .date-picker table th:last-child {
+    border: none;
+}
+
+.date-picker table .btn {
+    background: white;
+    color: #222427;
+}
+
+.date-picker thead tr:first-child th:nth-child(2) button.btn strong {
+    font-size: 23px !important;
+    font-weight: 400 !important;
+}
+
+.date-picker thead tr:first-child th:first-child .btn, .date-picker thead tr:first-child th:last-child .btn {
+    font-size: 20px !important;
+    color: $red;
+}
+
+.date-picker thead tr:first-child + tr th {
+    font-size: 13px !important;
+    font-weight: 400;
+}
+
+.date-picker tbody td .btn {
+    font-size: 13px !important;
+}
+
+.date-picker tbody .btn:hover {
+    background: $red;
+    color: white;
+}
+
+.date-picker tbody .btn:active, .date-picker .btn:focus {
+    color: white;
+}
+
+.date-picker thead .btn:active, .date-picker thead .btn:focus {
+    background: white !important;
+    color: #222427;
+}
+
+.date-picker .btn.btn-info {
+    background: $red !important;
+    color: white !important;
+}
+
+/*waypoint nav tabs hybrid where I combined bootstrap tabs and the waypoint styles*/
+.waypointTabsHybrid .nav-tabs {
+    border-bottom: none;
+    height: 55px;
+}
+
+.waypointTabsHybrid .nav-tabs li {
+    line-height: 55px;
+}
+
+.waypointTabsHybrid .nav-tabs > li > a {
+    border-radius: 0;
+    border: 0;
+    line-height: 55px;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: transparent;
+}
+
+.waypointTabsHybrid .nav-tabs > li > a:hover {
+    border: 0;
+}
+
+.waypointTabsHybrid .nav-tabs > .active a {
+    border: none;
+    background: transparent;
+    color: $red;
+}
+
+.waypointTabsHybrid .nav {
+    margin-bottom: 0;
+}
+
+/* END TASK PROGRESS STYLES *******************************************************************************************/
+
+.control-left,
+.control-right {
+    height: 60px;
+    width: 50px;
+    line-height: 60px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.control-left {
+    float: left;
+}
+
+.control-right {
+    float: right;
+}
+
+.control-left .active, .control-right .active {
+    color: #333;
+    cursor: pointer;
+}
+
+.control-left .disabled, .control-right .disabled {
+    color: #ccc;
+}
+
+.control-left .active:hover, .control-right .active:hover {
+    color: #B21016;
+}
+
+.workflow-info {
+    background-color: #eee;
+    margin: -20px -20px 0 -20px;
+    padding: 20px;
+}
+
+.progress-wrapper {
+    margin-bottom: 25px;
+}
+
+.tab-table.tab-content {
+    overflow: visible;
+}
+
+.tab-wrapper .nav-tabs {
+    background-color: #f8f8f8;
+    border-left: 1px solid #d8dad8;
+    border-right: 1px solid #d8dad8;
+    padding: 5px 5px 0;
+}
+
+.tab-wrapper .nav-tabs li > a:focus {
+    border-bottom-width: 1px !important;
+    border-bottom-color: transparent !important;
+}
+
+.tab-table table {
+    margin: 0;
+}
+
+.bgWhite.tab-wrapper {
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+.badges {
+    float: left;
+    display: inline;
+    margin-right: 10px;
+}
+
+.instructions-wrapper h3,
+.instructions-wrapper a {
+    color: #690;
+    font-size: 16px;
+    line-height: 1.1em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.instructions p {
+    margin: 0;
+}
+
+.instruction-buttons {
+    text-align: right
+}
+
+a [class^="icon-"],
+a [class*=" icon-"] {
+    text-decoration: none;
+}
+
+/*QUESTIONS AND ANSWERS STYLES*****************************************************************************************/
+
+.question-form .icon-legal {
+    font-size: 24px !important;
+    color: #900 !important;
+    cursor: pointer;
+}
+
+.question-form .icon-warning-sign {
+    font-size: 24px !important;
+    color: #900 !important;
+}
+
+.question-form .icon-info-sign {
+    font-size: 16px !important;
+    color: #29b !important;
+    position: relative;
+    top: 1px;
+}
+
+.question-form .icon-ok-circle {
+    font-size: 24px !important;
+    color: #360 !important;
+}
+
+.answer-group ul.errors {
+    margin-top: 5px;
+    margin-left: 0;
+}
+
+ul.errors li {
+    list-style: none;
+    color: $red;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.question-answer-group + .question-answer-group {
+    border-top: 1px solid #d8dad8 !important;
+    padding: 25px 0 !important;
+}
+
+.answer-group label.radio, .answer-group label.checkbox {
+    margin: 0 !important;
+    border: none !important;
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+.question {
+    color: #191c1e !important;
+    font-weight: 400 !important;
+}
+
+.question-answer-group:not(.question-active) .btn.medBtn,
+.question-answer-group:not(.question-active) .btn.btn-small,
+.question-answer-group:not(.question-active) button:not(.creamBtnRedTxt):not(.dropdown-toggle) {
+    background: #576065;
+
+    &.btn-red {
+        background: $red;
+    }
+}
+
+
+/*END QUESTIONS AND ANSWERS STYLES*************************************************************************************/
+
+/*MODAL STYLES*********************************************************************************************************/
+.modal-backdrop {
+    z-index: 100000 !important;
+}
+
+.modal {
+    z-index: 110000 !important;
+    background: transparent;
+
+    .modal-dialog .modal-content {
+        .modal-header {
+            background-color: $modal-header-bg;
+            border-bottom: none;
+            border-radius: 0;
+            color: $modal-header;
+            padding: 8px 16px;
+        }
+        .modal-body {
+            background-color: $modal-body-bg;
+            color: $modal-body;
+            max-height: 140px;
+            padding: 16px;
+            @media screen and (min-height: 520px) {
+                max-height: 60vh;
+            }
+            @media screen and (min-height: 720px) {
+                max-height: 70vh;
+            }
+            @media screen and (min-height: 1200px) {
+                max-height: 80vh;
+            }
+        }
+        .modal-footer {
+            border-top: none;
+            background: white;
+            padding: 16px;
+            text-align: center;
+        }
+    }
+    .btn {
+        line-height: 39px;
+        font-size: 14px;
+        padding: 0 26px;
+        display: inline-block;
+        background: #f8f8f8;
+        color: #191c1f;
+        border: 1px solid #d8dadb;
+        text-transform: uppercase;
+        border-radius: 0;
+        text-shadow: none;
+        font-family: 'Open Sans', sans-serif;
+        text-decoration: none;
+        text-align: center;
+        -webkit-transition: background-color 0.5s ease;
+        -moz-transition: background-color 0.5s ease;
+        -o-transition: background-color 0.5s ease;
+        transition: background-color 0.5s ease;
+
+        &.btn-red {
+            background: $red;
+            color: white;
+        }
+        &.btn-primary {
+            background: $red;
+            color: white;
+            border: none;
+        }
+    }
+    label.radio {
+        border-bottom: none;
+    }
+    h3 {
+        font-size: 36px;
+        line-height: 36px;
+        font-weight: 300;
+    }
+}
+
+.modal .disputeModal {
+    min-width: 500px;
+}
+
+.modal .disputeModal dl {
+    margin-top: 0;
+}
+
+.modal .media h1 {
+    margin-top: 5px;
+}
+
+.modal [ucf-step] .btn {
+    line-height: inherit;
+
+    &.medBtn {
+        line-height: 39px;
+    }
+}
+
+/*END MODAL STYLES*****************************************************************************************************/
+
+/*TAB STYLES***********************************************************************************************************/
+/* STYLE OVERWRITES FOR TAB PROPERTIES*/
+
+ul.nav-tabs {
+    > li {
+        > a {
+            border: 1px solid $table-border-color;
+            color: $dark;
+            padding: 8px 26px;
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                border: 1px solid $table-border-color;
+            }
+        }
+        &.active > a {
+            border-bottom: 1px solid transparent;
+
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid transparent;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+/*END TAB STYLES*******************************************************************************************************/
+
+span.label {
+    line-height: 29px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 14px;
+    background: $red;
+    text-shadow: none;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    border-radius: 14px;
+}
+
+.label-success {
+    background: #009EA1 !important;
+}
+
+.iconLabel {
+    display: inline-block;
+    width: 26px;
+    height: 32px;
+}
+
+.labelCheck {
+    background: transparent url('/img/check_icon.png') center center no-repeat;
+}
+
+.labelX {
+    background: transparent url('/img/x_icon.png') center center no-repeat;
+}
+
+.projectLabel, .projectLabel:hover, .projectLabel:focus {
+    display: inline-block;
+    line-height: 29px;
+    font-size: 12px;
+    font-weight: 400;
+    width: 91px;
+    background: #F17023;
+    text-shadow: none;
+    color: white;
+    text-decoration: none;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    border-radius: 14px;
+}
+
+.projectLabel.label-important {
+    background: $red;
+}
+
+.projectLabel.label-inverse {
+    background: #576065;
+}
+
+.projectLabel.label-training {
+    background: #6600cc;
+}
+
+/*HEADLINE BUTTONS AND FORMS*******************************************************************************************/
+.headlineLinks {
+    font-size: 12px !important;
+    text-align: right;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.headlineLinks form {
+    display: inline-block;
+}
+
+.headlineLinks input, .headlineLinks select, .headlineLinks label, .headlineLinks form {
+    margin-bottom: 0;
+}
+
+.headlineLinks label {
+    padding-left: 15px;
+}
+
+.headlineLinks .dropdown-toggle {
+    margin-top: 8px;
+    text-transform: capitalize;
+    text-align: left;
+    color: #7a7f82;
+    font-size: 12px;
+}
+
+.headlineLinks .dropdown-toggle:hover {
+    color: #7a7f82;
+    background: white url('/img/arrow-down-grey.png') 96% center no-repeat;
+}
+
+.headlineLinks .dropdown-menu {
+    left: auto;
+    right: 0;
+    float: right;
+    width: 200px;
+}
+
+.headlineLinks .dropdown-menu .divider {
+    display: none;
+}
+
+.headlineLinks .dropdown-menu > li:not(:last-child) a {
+    border-bottom: 1px solid #d8dad8;
+}
+
+.headlineLinks .dropdown-menu a {
+    display: block;
+    width: 100%;
+    line-height: 40px;
+    text-align: left;
+    text-decoration: none;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+.expandToggle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 57px;
+    height: 100%;
+    margin-left: 10px;
+    border-left: 1px solid #d8dad8;
+}
+
+.expandToggle span {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.toggleOpen {
+    background: url('/img/icon_expand.png') center center no-repeat;
+    background-size: 22px auto !important;
+}
+
+.toggleClose {
+    background: url('/img/icon_expand_close.png') center center no-repeat;
+    background-size: 24px auto !important;
+}
+
+.taskForm {
+}
+
+.taskForm form {
+    margin: 0;
+}
+
+.taskForm .btn.has-spinner {
+    width: 192px;
+    float: right;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.taskForm .inpageNav {
+    display: inline-block;
+    width: 150px;
+    height: 39px;
+}
+
+.taskForm .inpageSubNav {
+    width: 250px;
+    top: 45px;
+}
+
+.taskForm .inpageSubNav a.btn {
+    background: white;
+}
+
+.taskForm .inpageSubNav a.btn:focus,
+.taskForm .inpageSubNav a.btn:active {
+    background: white !important;
+    box-shadow: none;
+}
+
+.taskForm .inpageSubNav a.btn:hover {
+    background: #f8f8f8;
+}
+
+.taskForm .headlineToggle {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    line-height: 39px;
+    padding-left: 37px;
+    border: 1px solid #d8dad8;
+    background: url('/img/icon_plus_red.png') 10px center no-repeat;
+    background-size: 16px auto !important;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+.taskForm .headlineToggle span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    width: 39px;
+    text-align: center;
+    line-height: 39px;
+    border-left: 1px solid #d8dad8;
+}
+
+.taskForm input, .taskForm button {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.taskForm input {
+    width: 200px;
+}
+
+/*END HEADLINE BUTTONS AND FORMS***************************************************************************************/
+
+.memberList {
+    margin: 0 !important;
+}
+
+.memberList li {
+    width: 30%;
+    float: left;
+    list-style: none;
+    padding: 0 1.5% 10px 1.5%;
+}
+
+.project-acceptance {
+}
+
+.project-acceptance .control-group {
+    margin: 20px auto;
+    float: none !important;
+    display: block;
+    text-align: center;
+}
+
+.project-acceptance .control-group .checkboxParent {
+    float: none;
+    border-bottom: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.reportLink {
+    width: 240px;
+    margin-left: 15px;
+    display: inline-block;
+    font-size: 13px;
+}
+
+.reportLinkLong {
+    display: inline-block;
+    font-size: 13px;
+}
+
+/*PAGINATION STYLES****************************************************************************************************/
+
+/* Extra space for paginator widget */
+div.pagination {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.pagination a {
+    cursor: pointer;
+}
+
+.pagination ul {
+    box-shadow: none;
+    margin-top: 10px;
+}
+
+.pagination ul > li > a, .pagination ul > li > span {
+    float: none;
+}
+
+.pagination ul > li:not(:first-child):not(:last-child) > a,
+.pagination ul > li:not(:first-child):not(:last-child) > span {
+    background: white !important;
+    border: 1px solid #d8dad8;
+    color: #1E2123;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 8px 18px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.pagination ul > li:first-child > a, .pagination ul > li:last-child > a {
+    background: transparent;
+    border: none;
+    text-decoration: underline;
+}
+
+.entryCount {
+    display: inline-block;
+    float: left;
+    text-align: left;
+    padding-top: 15px;
+}
+
+/*END PAGINATION STYLES************************************************************************************************/
+
+/*ASSIGNMENT STYLES****************************************************************************************************/
+.doughnut-legend {
+    display: block;
+    margin-left: 0;
+    margin-top: 20px;
+}
+
+.doughnut-legend li {
+    display: inline-block;
+    list-style: none;
+    float: left;
+    width: 50%;
+    margin-bottom: 15px;
+    font-size: 11px;
+    text-align: left;
+    padding: 0;
+    line-height: 10px;
+}
+
+.doughnut-legend span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.doughnut-legend span.doughnut-legend-icon {
+    width: 20px;
+    height: 10px;
+    margin-right: 6px;
+    border-radius: 0;
+    position: relative;
+}
+
+.label-info {
+    background: #f17023 !important;
+}
+
+/*END ASSIGNMENT STYLES************************************************************************************************/
+
+.list-wrapper {
+    padding-top: 3px;
+}
+
+.list-wrapper.no-pad-top {
+    padding-top: 0;
+}
+
+.list-wrapper input[type="radio"],
+.list-wrapper input[type="checkbox"] {
+    margin: -2px 0 0 0;
+}
+
+/* STYLES CREATED FOR UCF UI */
+
+.legend,
+.actions {
+    margin-top: 10px;
+}
+
+.actions {
+    text-align: right;
+}
+
+.actions > .btn-group {
+    margin-left: 10px;
+}
+
+.legend table {
+    border: 1px solid #999;
+    border-collapse: collapse;
+}
+
+.legend table td {
+    padding: 5px 10px;
+}
+
+.legend-item {
+    background-color: #999;
+    color: #fff;
+    font-weight: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.num-red {
+    color: #dd2222;
+    font-weight: bold;
+}
+
+.num-green {
+    color: #690;
+    font-weight: bold;
+}
+
+.list-group {
+    padding-left: 0;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 5px 15px;
+    margin-bottom: -1px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+}
+
+.list-group-item:first-child {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.list-group-item:last-child {
+    margin-bottom: 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+li .over {
+    box-shadow: inset 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+}
+
+div div.input-append textarea.append-below {
+    width: 100%;
+}
+
+div div.input-append {
+    margin-top: -11px;
+}
+
+button.append-below {
+    display: block;
+}
+
+textarea.full-width, div.full-width {
+    width: 100%;
+    margin-right: 5px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+table.project-header {
+    table-layout: fixed;
+}
+
+.project-header > thead > tr > th {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.project-header > thead > tr > th:first-child {
+    width: 15%;
+}
+
+.project-header > thead > tr > th:nth-child(2) {
+    width: 75%;
+}
+
+.project-header > thead > tr > th:nth-child(3) {
+    width: 10%;
+}
+
+.long-url {
+    word-break: break-all;
+}
+
+.dirty-step {
+    padding: 10px;
+    border: 1px solid red;
+    background-color: #eeeeee;
+}
+
+/*PROJECT CREATION PAGES*/
+.new-project-menu {
+    ul {
+        margin: 0;
+
+        li {
+            list-style: none;
+            margin: 0;
+        }
+
+        li:not(:first-child) {
+            border-top: none;
+        }
+    }
+
+    label.radio {
+        position: relative;
+        padding-left: 25px;
+
+        input {
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    form {
+        margin: 0;
+    }
+}
+
+.asset-hierarchy-dropdown {
+    width: 300px;
+}
+
+.project-admin-citation-reference {
+    width: 325px;
+}
+
+.element-inline {
+    display: inline;
+}
+
+input[type="checkbox"].request-term-checkbox-align {
+    margin: 0 10px 0 185px;
+}
+
+.impersonator {
+    position: relative;
+    top: -10px;
+    color: $red;
+    background: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    border: 1px solid #d8dad8;
+    padding: 18px;
+    margin-bottom: 10px;
+}
+
+.impersonator button {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+}
+
+.task-report {
+    font-size: 12px;
+}
+
+.dashboard-account-type {
+    text-align: right;
+    margin: 20px 0 0 0;
+}
+
+.team-list-table th, .team-list-table td {
+    margin: 5px !important;
+    padding: 5px !important;
+}
+
+select:focus,
+input:focus {
+    box-shadow: none !important;
+    outline: 0;
+}
+
+textarea:focus {
+    box-shadow: none !important;
+    outline: 2px solid $red !important;
+}
+
+a.projectLabel:focus,
+a.btn:focus,
+button:focus:not(.close),
+input:focus,
+select:focus,
+.fauxCheckbox:focus,
+.fauxRadio:focus {
+    border: 2px solid $red !important;
+}
+
+.large-text-area {
+    width: 500px;
+}
+
+.training-task-list {
+    font-size: 16px;
+    padding: 5px;
+}
+
+/*Date Range Picker*/
+.daterangepicker .ranges {
+    float: unset !important;
+    width: 100%!important;
+    display: flex!important;
+}
+
+.daterangepicker .ranges .range_inputs {
+    width: 100%!important;
+    display: flex!important;
+    margin-top: 20px;
+}
+
+.daterangepicker {
+    width: 505px !important;
+}
+
+.daterangepicker td.active, .daterangepicker td.active:hover {
+    background-color: #cd1e1e !important;
+    border-color: #cd1e1e !important;
+    color: #fff;
+}
+
+.daterangepicker td.in-range {
+    background: #f9ccd1 !important;
+}
+
+.daterangepicker td.active, .daterangepicker td.active:hover {
+    background-color: #cd1e1e !important;
+    border-color: #cd1e1e !important;
+    color: #fff;
+}
+
+.daterangepicker .input-mini.active {
+    border: 1px solid #cd1e1e !important;
+}
+
+.transactions h3 {
+    font-size: 26px !important;
+    font-weight: normal !important;
+}
+
+.btn-group.dropdown.open > ul.dropdown-menu li {
+    cursor: pointer;
+}
+
+.fullWidthTD {
+    flex-basis: 100% !important;
+}
+
+div.detailLabel {font-size: 1.2em; color: #979797;}
+div.detailValue{ font-size: 1.5em; color:black;}
+
+ul.statusList {
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+
+    li {
+        margin: 5px !important;
+        background-color: $light-gray;
+    }
+
+    li.match {
+        background-color: $red;
+        color: $white;
+    }
+}

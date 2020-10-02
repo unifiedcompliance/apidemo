@@ -1,0 +1,227 @@
+.campaign-template-page {
+    $template-tab-bg: #eee;
+    $template-tab-active-bg: $page-bg;
+
+    .template-info-container {
+        .checkbox.live {
+            min-height: 44px;
+        }
+        .button-container button {
+            padding: 0 16px;
+        }
+    }
+    .template-tabs-container {
+
+    }
+    .tab-container {
+        min-width: 654px;
+
+        .nav-tabs li {
+            a {
+                background-color: $template-tab-bg;
+                padding: 8px;
+
+                &:hover,
+                &:focus {
+                    background-color: $light-gray;
+                }
+            }
+            &.active a {
+                background-color: $template-tab-active-bg;
+                color: $red;
+            }
+        }
+        .tab-content {
+            border: 1px solid $table-border-color;
+            border-top: 0;
+            padding: 24px;
+
+            // **************** CAMPAIGN TRACKING TAB ***************/
+            #campaignTracking {
+                #tblTemplateCampaigns.table.fixed-header {
+                    overflow-x: hidden;
+                    max-height: 256px;
+
+                    > thead:first-child > tr:first-child > th,
+                    > tbody > tr > td {
+                        align-items: center;
+                        justify-content: center; //all cols EXCEPT campaign name
+                        flex-basis: 12%;
+                        width: 12%;
+
+                        &:first-child {
+                            flex-grow: 0;
+                            flex-shrink: 0;
+                            flex-basis: 76%;
+                            justify-content: flex-start;
+                        }
+                        .checkbox,
+                        .radio {
+                            min-height: 16px;
+                        }
+                    }
+                }
+                .campaign-charts {
+                    margin-top: 36px;
+                }
+            }
+            // **************** TEMPLATE TRACKING TAB ***************/
+            #templateTracking {
+                #userData {
+                    thead,
+                    tbody {
+                        overflow-x: hidden;
+                        max-height: 256px;
+                    }
+                    > thead > tr:first-child > th {
+                        font-size: 10px;
+                    }
+                    > thead > tr:first-child > th,
+                    > tbody > tr > td {
+                        justify-content: flex-end;
+
+                        &:nth-child(1) { //user
+                            justify-content: flex-start;
+                            flex-basis: 15%;
+                            word-wrap: break-word;
+                        }
+                        &:nth-child(2) {
+                            justify-content: flex-start;
+                            flex-basis: 16%;
+                        }
+                        &:nth-child(3) { //sent
+                            flex-basis: 7.5%;
+                            word-break: break-all;
+                        }
+                        &:nth-child(4) { //bounced
+                            flex-basis: 12%;
+                            word-break: break-all;
+                        }
+                        &:nth-child(5) { //unsubscribed
+                            flex-basis: 16%;
+                            word-break: break-all;
+                        }
+                        &:nth-child(6) { //complained
+                            flex-basis: 14.5%;
+                            word-break: break-all;
+                        }
+                        &:nth-child(7) { //opened
+                            flex-basis: 10%;
+                            word-break: break-all;
+                        }
+                        &:last-child { //clicks
+                            flex-basis: 9%;
+                            word-break: break-all;
+                        }
+                    }
+                }
+                #urlData {
+                    margin-top: 36px;
+
+                    thead,
+                    tbody {
+                        overflow-x: hidden;
+                        max-height: 456px;
+                    }
+                    > thead > tr:first-child > th,
+                    > tbody > tr > td {
+                        justify-content: flex-end;
+                        flex-basis: 20%;
+
+                        &:first-child { //url
+                            justify-content: flex-start;
+                            flex-basis: 80%;
+                            word-wrap: break-word;
+                            word-break: break-all;
+                        }
+                    }
+                }
+            }
+            // **************** URL TRACKING TAB ***************/
+            #urlTracking {
+                #urls {
+                    thead,
+                    tbody {
+                        overflow-x: hidden;
+                        max-height: 256px;
+                    }
+                    > thead > tr:first-child > th,
+                    > tbody > tr > td {
+                        align-items: center;
+                        flex-basis: 13%;
+                        justify-content: center;
+
+                        &:nth-child(1) { //url
+                            justify-content: flex-start;
+                            flex-basis: 87%;
+                            word-wrap: break-word;
+                            word-break: break-all;
+                        }
+                    }
+                }
+                #urlTimestamps {
+                    margin-top: 36px;
+
+                    thead,
+                    tbody {
+                        overflow-x: hidden;
+                        max-height: 456px;
+                    }
+                    > thead > tr:first-child > th,
+                    > tbody > tr > td {
+                        justify-content: flex-start;
+                    }
+                }
+            }
+            // **************** HTML/PLAIN TEMPLATE TAB ***************/
+            #htmlTemplate,
+            #plainTextTemplate {
+                .button-container button {
+                    margin: 0 0 24px 24px;
+                }
+                .form-group {
+                    margin-bottom: 0;
+                }
+                .popover {
+                    max-width: 400px;
+                    width: 100%;
+
+                    .popover-content {
+                        padding: 8px;
+
+                        #tblTags {
+                            word-wrap: break-word;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+        .tab-container {
+            margin-top: 36px;
+        }
+    }
+
+    .deleteRow{
+        display: none;
+    }
+
+    .deleteRow:hover {
+        cursor: pointer;
+    }
+
+    .tableRow:hover .deleteRow{
+        display: block;
+    }
+
+    hr {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 80%;
+        display: block;
+        overflow: hidden;
+        border-style: inset;
+        border-width: 1px;
+    }
+}

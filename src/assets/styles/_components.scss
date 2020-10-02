@@ -1,0 +1,154 @@
+//Profile modal window and sign out.
+.inpageSubNav {
+    box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border: 1px solid $header-border-color;
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 45px;
+    top: 60px;
+    transition: min-height 0.5s, opacity 0.5s;
+    -webkit-transition: min-height 0.5s, opacity 0.5s;
+    -moz-transition: min-height 0.5s, opacity 0.5s;
+    z-index: 2000;
+    width: 250px;
+
+    &.open {
+        min-height: 125px;
+        height: auto;
+        opacity: 1;
+
+        li {
+            background-color: $white;
+            border-bottom: 1px solid $header-border-color;
+            margin: 0;
+            padding: 12px;
+
+            &:last-child {
+                background-color: $light;
+                border-bottom: 0;
+            }
+            span {
+                color: $dark;
+            }
+            .btn-logout {
+                color: $dark;
+                margin: 0 48px;
+
+                &:hover {
+                    border-color: #CD1E1E;
+                    color: #CD1E1E;
+                }
+            }
+        }
+    }
+    &.closed {
+        min-height: 0;
+        height: 0;
+        opacity: 0;
+
+        li {
+            display: none;
+        }
+    }
+}
+//end inpageSubNav
+
+//horizontal menu that changes with each section
+.subheader-nav {
+    background-color: $header-bg;
+    border-bottom: 1px solid $header-border-color;
+    margin: 0;
+    padding: 0;
+
+    ul {
+        box-sizing: border-box;
+        font-size: 1.1em;
+        letter-spacing: 0.05em;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            margin-right: 40px;
+            padding: 20px 0 0 0;
+
+            a {
+                color: $black;
+                display: block;
+                padding-bottom: 15px;
+                text-transform: uppercase;
+                text-decoration: none;
+                border-bottom: 3px solid $header-bg;
+
+                &.activeLink {
+                    color: $black;
+                    border-bottom: 3px solid $red;
+                }
+                &:focus,
+                &:hover {
+                    color: $dark-gray;
+                    border-bottom: 3px solid $red;
+                }
+            }
+        }
+    }
+}
+//end subheader-nav
+
+.chart-container {
+    .box {
+        h4 {
+            line-height:24px;
+        }
+
+        .row:last-child {
+            margin-left: -23px;
+            margin-right: -23px;
+
+            > * {
+                padding-right: 0;
+                padding-left: 0;
+            }
+        }
+    }
+
+    //fixes bug with flashing tooltip
+    svg > g:last-child {
+        pointer-events: none;
+    }
+}
+
+$side-padding: 10px;
+
+.section {
+  border: 1px solid $gray;
+  border-radius: 2px;
+  background-color: $light-gray;
+  padding: 0 $side-padding 10px;
+  margin: 10px 0;
+
+  .header {
+    background-color: #f7f7f7;
+    padding: 10px 15px;
+    border-bottom: 1px solid $gray;
+    margin: 0 (-$side-padding) 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  .divider {
+    margin: 10px (-$side-padding);
+    border-bottom: 1px solid $gray;
+  }
+
+  & > .row {
+    margin-left: (15px + $side-padding);
+    margin-right: (15px + $side-padding);
+  }
+}

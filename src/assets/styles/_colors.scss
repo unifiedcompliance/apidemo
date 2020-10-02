@@ -1,0 +1,62 @@
+$black: #000;
+$white: #fff;
+
+$light: #f8f8f8;
+$light-gray: #e7e7e8;
+$gray: #777a7c;
+$dark-gray: #576065;
+$dark: #191c1f;
+
+$light-red: #e23c3c;
+$red: #cd1e1e;
+$dark-red: #bc1919;
+
+$blue: #0e7dc1;
+$indigo: #5061a6;
+$teal: #009EA1;
+$orange: #f17023;
+$green: #449d44;
+$yellow: #e4aa24;
+
+
+$page-bg: $light;
+$page-text-default: $dark;
+$page-text-inactive: $dark-gray;
+
+$nav-inactive: $gray;
+$nav-inactive-bg: $dark;
+$nav-inactive-hover: $white;
+$nav-inactive-hover-bg: $dark;
+$nav-active: $white;
+$nav-active-bg: $dark;
+$nav-active-hover: $white;
+$nav-active-hover-bg: $dark;
+$nav-active-highlight: $red;
+$nav-separator-bg: #2b2e30;
+
+$submenu-inactive: $page-text-inactive;
+$submenu-inactive-bg: $light;
+$submenu-active: $page-text-default;
+$submenu-active-bg: $white;
+
+$header-bg: $white;
+$header-border-color: #D8DADB;
+
+$section-border-color: $header-border-color;
+
+$table-border-color: #d8dad8;
+$table-body-bg: $white;
+$table-header-bg: $light;
+$table-hover-bg: #f2fbfb;
+
+$modal-header: $white;
+$modal-header-bg: $red;
+$modal-body: $dark;
+$modal-body-bg: $white;
+
+$deliveries: $teal;
+$bounces: $red;
+$views: $blue;
+$clicks: $indigo;
+$unsubscribes: $orange;
+$complaints: $yellow;
